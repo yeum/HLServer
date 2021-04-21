@@ -2,14 +2,13 @@
 #include "HLConfig.h"
 #include "HLBoost.h"
 #include "HLFlatbuffer.h"
+#include "HLServerMgr.h"
 
 int main()
 {
-	boost::asio::io_service io;
-	boost::asio::deadline_timer t(io, boost::posix_time::seconds(5));
-	t.wait();
-
-	std::cout << "Hello, world!" << std::endl;
+	HLServerMgr server_mgr;
+	int32_t max_thread_num = boost::thread::hardware_concurrency();
+	server_mgr.initialize(37000, max_thread_num);
 
 	system("pause");
 	return 0;

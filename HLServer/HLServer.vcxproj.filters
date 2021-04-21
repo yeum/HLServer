@@ -1,10 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="리소스 파일">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
     <Filter Include="Entry">
       <UniqueIdentifier>{edd2a983-455e-493f-92ac-49dcf29144e3}</UniqueIdentifier>
     </Filter>
@@ -14,10 +10,45 @@
     <Filter Include="Protocol\Compile">
       <UniqueIdentifier>{f48e3c87-2228-4f02-a55e-c6f118168fc1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Network">
+      <UniqueIdentifier>{bf955f59-9a6e-4b0b-9170-04d61f7b24ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network\Server">
+      <UniqueIdentifier>{fb952126-a557-4a6b-8ea5-b0c5da4f6485}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network\Server\Mgr">
+      <UniqueIdentifier>{8d4d707e-2a7b-4ffd-9442-91587b6b6d58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header">
+      <UniqueIdentifier>{433f5753-302b-453e-b8fe-0c17d2f9d27d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Entry</Filter>
     </ClCompile>
+    <ClCompile Include="HLServerMgr.cpp">
+      <Filter>Network\Server\Mgr</Filter>
+    </ClCompile>
+    <ClCompile Include="HLServer.cpp">
+      <Filter>Network\Server</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="HLConfig.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="HLBoost.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="HLFlatbuffer.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="HLServerMgr.h">
+      <Filter>Network\Server\Mgr</Filter>
+    </ClInclude>
+    <ClInclude Include="HLServer.h">
+      <Filter>Network\Server</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
