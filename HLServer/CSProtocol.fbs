@@ -1,0 +1,16 @@
+
+enum PT : int {
+	NONE = 0,
+	BEGIN_OF_LOGIN_PACKET,
+
+	CS_Login_REQ,
+	SC_Login_RES,
+
+	END_OF_LOGIN_PACKET
+}
+
+table BodyPacket {
+	PacketType:PT = NONE;
+}
+
+root_type BodyPacket;
